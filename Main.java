@@ -42,9 +42,9 @@ public class Main {
        IntUnaryOperator squareOperation = LambdaUtil.intSquareOperation();
         System.out.println(squareOperation.applyAsInt(4));     //16
 
-//        LongBinaryOperator sumOperation = LambdaUtil.longSumOperation();
-//        System.out.println(sumOperation.applyAsLong(5, -10));//-5
-//
+       LongBinaryOperator sumOperation = LambdaUtil.longSumOperation();
+        System.out.println(sumOperation.applyAsLong(5, -10));//-5
+
 //        ToIntFunction<String> stringToIntConverter = LambdaUtil.stringToIntConverter();
 //        int num = stringToIntConverter.applyAsInt("234");
 //        System.out.println(num);//234

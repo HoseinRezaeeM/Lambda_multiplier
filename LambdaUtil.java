@@ -65,25 +65,19 @@ public class LambdaUtil {
         return intUnaryOperator;
     }
 
-    /**
-     * Returns {@link IntUnaryOperator} that calculates an integer square
-     *
-     * @return square operation
-     */
+
     public static IntUnaryOperator intSquareOperation() {
         IntUnaryOperator intUnaryOperator;
         intUnaryOperator = (s) ->(s*s);
         return intUnaryOperator;
     }
 
-    /**
-     * Returns a {@link LongBinaryOperator} sum operation.
-     *
-     * @return binary sum operation
-     */
+
     public static LongBinaryOperator longSumOperation() {
-        //todo
-        return null;
+        LongBinaryOperator longBinaryOperator;
+        longBinaryOperator =Long::sum;                  //MethodReference
+        //longBinaryOperator =(a,b)-> Long.sum(a,b);      Lambda
+        return longBinaryOperator;
     }
 
     /**
