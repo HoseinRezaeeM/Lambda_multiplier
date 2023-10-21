@@ -45,9 +45,9 @@ public class Main {
        LongBinaryOperator sumOperation = LambdaUtil.longSumOperation();
         System.out.println(sumOperation.applyAsLong(5, -10));//-5
 
-//        ToIntFunction<String> stringToIntConverter = LambdaUtil.stringToIntConverter();
-//        int num = stringToIntConverter.applyAsInt("234");
-//        System.out.println(num);//234
+        ToIntFunction<String> stringToIntConverter = LambdaUtil.stringToIntConverter();
+        int num = stringToIntConverter.applyAsInt("234");
+        System.out.println(num);//234
 //
 //        Supplier<IntUnaryOperator> fiveMultiplyFunctionSupplier = LambdaUtil.nMultiplyFunctionSupplier(5);
 //        IntUnaryOperator multiplyByFiveOperation = fiveMultiplyFunctionSupplier.get();

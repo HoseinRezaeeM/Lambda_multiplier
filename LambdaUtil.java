@@ -80,14 +80,12 @@ public class LambdaUtil {
         return longBinaryOperator;
     }
 
-    /**
-     * Returns a {@link ToIntFunction<String>} that converts string to integer.
-     *
-     * @return string to int converter
-     */
+
     public static ToIntFunction<String> stringToIntConverter() {
-        //todo
-        return null;
+        ToIntFunction<String> toIntFunction;
+        toIntFunction = Integer::parseInt;                      //MethodReference
+        //toIntFunction =(string)->Integer.parseInt(string);         Lambda
+        return toIntFunction;
     }
 
     /**
