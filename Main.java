@@ -57,9 +57,9 @@ public class Main {
        Supplier<Supplier<Supplier<String>>> wellDoneSupplier = LambdaUtil.trickyWellDoneSupplier();
        System.out.println(wellDoneSupplier.get().get().get());//WELL DONE!
 
-//        UnaryOperator<Function<String, String>> composeWithTrimFunction = LambdaUtil.composeWithTrimFunction();
-//        Function<String, String> toLowerWithTrim = composeWithTrimFunction.apply(String::toLowerCase);
-//        System.out.println(toLowerWithTrim.apply("  Hey "));//hey
+       UnaryOperator<Function<String, String>> composeWithTrimFunction = LambdaUtil.composeWithTrimFunction();
+       Function<String, String> toLowerWithTrim = composeWithTrimFunction.apply(String::toLowerCase);
+       System.out.println(toLowerWithTrim.apply("  Hey "));//hey
 //
 //        //extra points
 //        BiFunction<IntUnaryOperator, IntPredicate, IntUnaryOperator> intFunctionToConditionalIntFunction

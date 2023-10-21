@@ -95,25 +95,18 @@ public class LambdaUtil {
         return supplier;
     }
 
-    /**
-     * Returns {@link Supplier} of {@link Supplier} of {@link Supplier} of {@link String} "WELL DONE".
-     *
-     * @return a supplier instance
-     */
+
     public static Supplier<Supplier<Supplier<String>>> trickyWellDoneSupplier() {
         Supplier<Supplier<Supplier<Supplier<String>>>> supplierSupplier ;
         supplierSupplier =() ->()->()->()->new String("WELL DONE");
         return supplierSupplier.get();
     }
 
-    /**
-     * Returns a {@link UnaryOperator} that accepts str to str function and returns the same function composed with trim
-     *
-     * @return function that composes functions with trim() function
-     */
+
     public static UnaryOperator<Function<String, String>> composeWithTrimFunction() {
-        //todo
-        return null;
+        UnaryOperator<Function<String,String>> functionUnaryOperator;
+        functionUnaryOperator=(s)->(s.andThen((Function<String, String>) (string)-> string.trim()));
+        return functionUnaryOperator;
     }
 
     /**
