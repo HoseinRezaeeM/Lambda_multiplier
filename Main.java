@@ -9,9 +9,10 @@ public class Main {
         Supplier<String> helloSupplier = LambdaUtil.helloSupplier();
         System.out.println(helloSupplier.get());  //Hello
 
-//        Predicate<String> isEmptyPredicate = LambdaUtil.isEmptyPredicate();
-//
-//        System.out.println(isEmptyPredicate.test("java"));//false
+        Predicate<String> isEmptyPredicate = LambdaUtil.isEmptyPredicate();
+        System.out.println(isEmptyPredicate.test("java"));//false
+
+
 //        System.out.println(isEmptyPredicate.test(""));//true
 //
 //        BiFunction<String, Integer, String> stringMultiplier = LambdaUtil.stringMultiplier();
