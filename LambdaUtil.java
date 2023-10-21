@@ -1,4 +1,5 @@
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.Map;
 import java.util.function.*;
 
@@ -7,36 +8,34 @@ public class LambdaUtil {
 
 
     public static Supplier<String> helloSupplier() {
-        Supplier<String> stringSupplier =()-> new String("Hello");
+        Supplier<String> stringSupplier;
+        stringSupplier = ()-> new String("Hello");
         return stringSupplier;
     }
 
     public static Predicate<String> isEmptyPredicate() {
-        Predicate<String> stringPredicate =String::isEmpty;
+        Predicate<String> stringPredicate;
+        stringPredicate = String::isEmpty;
         return stringPredicate;
 
     }
 
-
     public static BiFunction<String, Integer, String> stringMultiplier() {
-        BiFunction<String, Integer, String> biFunction = (s, i) -> {
-            for (int j = 1; j < i; j++) {
-                System.out.print(s);
+        BiFunction<String, Integer, String> biFunction;
+        biFunction = (string, integer) -> {
+            for (int j = 1; j < integer; j++) {
+                System.out.print(string);
             }
-            return s;
+            return string;
         };
         return biFunction;
     }
 
-    /**
-     * Returns a {@link Function} that converts a {@link BigDecimal} number into a {@link String} that start with
-     * a dollar sign and then gets a value
-     *
-     * @return function that converts adds dollar sign
-     */
+
     public static Function<BigDecimal, String> toDollarStringFunction() {
-        //todo
-        return null;
+        Function<BigDecimal,String> decimalStringFunction;
+        decimalStringFunction = BigDecimal::toString;
+        return decimalStringFunction;
     }
 
     /**
@@ -48,8 +47,12 @@ public class LambdaUtil {
      * @return a string predicate
      */
     public static Predicate<String> lengthInRangePredicate(int min, int max) {
-        //todo
-        return null;
+       Predicate<String> predicate =(string)->{
+           if(string.length() < max && string.length() >min){
+               return true;
+           }return false;
+       };
+        return predicate;
     }
 
     /**
