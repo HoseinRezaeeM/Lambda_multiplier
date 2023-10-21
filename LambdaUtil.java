@@ -4,10 +4,7 @@ import java.util.function.*;
 
 public class LambdaUtil {
 
-    /**
-     * Returns {@link Supplier} that always supply "Hello"
-     * @return a string supplier
-     */
+
 
     public static Supplier<String> helloSupplier() {
         Supplier<String> stringSupplier =()-> new String("Hello");
@@ -19,8 +16,10 @@ public class LambdaUtil {
      *
      * @return a string predicate
      */
-    public static Predicate<String> isEmptyPredicate() {//todo
-        return null;
+    public static Predicate<String> isEmptyPredicate() {
+        Predicate<String> stringPredicate =String::isEmpty;
+        return stringPredicate;
+
     }
 
     /**
