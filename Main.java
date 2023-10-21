@@ -53,10 +53,10 @@ public class Main {
        IntUnaryOperator multiplyByFiveOperation = fiveMultiplyFunctionSupplier.get();
       int result = multiplyByFiveOperation.applyAsInt(11);
         System.out.println(result);//11 * 5 => 55
-//
-//        Supplier<Supplier<Supplier<String>>> wellDoneSupplier = LambdaUtil.trickyWellDoneSupplier();
-//        System.out.println(wellDoneSupplier.get().get().get());//WELL DONE!
-//
+
+       Supplier<Supplier<Supplier<String>>> wellDoneSupplier = LambdaUtil.trickyWellDoneSupplier();
+       System.out.println(wellDoneSupplier.get().get().get());//WELL DONE!
+
 //        UnaryOperator<Function<String, String>> composeWithTrimFunction = LambdaUtil.composeWithTrimFunction();
 //        Function<String, String> toLowerWithTrim = composeWithTrimFunction.apply(String::toLowerCase);
 //        System.out.println(toLowerWithTrim.apply("  Hey "));//hey

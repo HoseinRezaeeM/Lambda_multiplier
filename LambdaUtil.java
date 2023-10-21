@@ -101,8 +101,9 @@ public class LambdaUtil {
      * @return a supplier instance
      */
     public static Supplier<Supplier<Supplier<String>>> trickyWellDoneSupplier() {
-        //todo
-        return null;
+        Supplier<Supplier<Supplier<Supplier<String>>>> supplierSupplier ;
+        supplierSupplier =() ->()->()->()->new String("WELL DONE");
+        return supplierSupplier.get();
     }
 
     /**
