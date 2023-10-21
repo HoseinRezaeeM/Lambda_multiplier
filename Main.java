@@ -48,11 +48,11 @@ public class Main {
         ToIntFunction<String> stringToIntConverter = LambdaUtil.stringToIntConverter();
         int num = stringToIntConverter.applyAsInt("234");
         System.out.println(num);//234
-//
-//        Supplier<IntUnaryOperator> fiveMultiplyFunctionSupplier = LambdaUtil.nMultiplyFunctionSupplier(5);
-//        IntUnaryOperator multiplyByFiveOperation = fiveMultiplyFunctionSupplier.get();
-//        int result = multiplyByFiveOperation.applyAsInt(11);
-//        System.out.println(result);//11 * 5 => 55
+
+       Supplier<IntUnaryOperator> fiveMultiplyFunctionSupplier = LambdaUtil.nMultiplyFunctionSupplier(5);
+       IntUnaryOperator multiplyByFiveOperation = fiveMultiplyFunctionSupplier.get();
+      int result = multiplyByFiveOperation.applyAsInt(11);
+        System.out.println(result);//11 * 5 => 55
 //
 //        Supplier<Supplier<Supplier<String>>> wellDoneSupplier = LambdaUtil.trickyWellDoneSupplier();
 //        System.out.println(wellDoneSupplier.get().get().get());//WELL DONE!

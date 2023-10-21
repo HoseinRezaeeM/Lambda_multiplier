@@ -88,16 +88,11 @@ public class LambdaUtil {
         return toIntFunction;
     }
 
-    /**
-     * Receives int parameter n, and returns a {@link Supplier} that supplies {@link IntUnaryOperator}
-     * that is a function f(x) = n * x
-     *
-     * @param n a multiplier
-     * @return a function supplier
-     */
+
     public static Supplier<IntUnaryOperator> nMultiplyFunctionSupplier(int n) {
-        //todo
-        return null;
+        Supplier<IntUnaryOperator> supplier ;
+        supplier =()-> (IntUnaryOperator) operand -> operand *n;  //multiplier Wowwww
+        return supplier;
     }
 
     /**
