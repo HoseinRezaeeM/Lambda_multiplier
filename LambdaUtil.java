@@ -1,15 +1,15 @@
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.Map;
+import java.util.Random;
 import java.util.function.*;
 
 public class LambdaUtil {
 
 
-
     public static Supplier<String> helloSupplier() {
         Supplier<String> stringSupplier;
-        stringSupplier = ()-> new String("Hello");
+        stringSupplier = () -> new String("Hello");
         return stringSupplier;
     }
 
@@ -33,36 +33,28 @@ public class LambdaUtil {
 
 
     public static Function<BigDecimal, String> toDollarStringFunction() {
-        Function<BigDecimal,String> decimalStringFunction;
+        Function<BigDecimal, String> decimalStringFunction;
         decimalStringFunction = BigDecimal::toString;
         return decimalStringFunction;
     }
 
-    /**
-     * Receives two parameter that represent a range and returns a {@link Predicate<String>} that verifies if string
-     * length is in the specified range. E.g. min <= length < max
-     *
-     * @param min min length
-     * @param max max length
-     * @return a string predicate
-     */
+
     public static Predicate<String> lengthInRangePredicate(int min, int max) {
-       Predicate<String> predicate =(string)->{
-           if(string.length() < max && string.length() >min){
-               return true;
-           }return false;
-       };
+        Predicate<String> predicate;
+        predicate = (string) -> {
+            if (string.length() < max && string.length() > min) {
+                return true;
+            }
+            return false;
+        };
         return predicate;
     }
 
-    /**
-     * Returns a {@link Supplier} of random integers
-     *
-     * @return int supplier
-     */
     public static IntSupplier randomIntSupplier() {
-        //todo
-        return null;
+        IntSupplier intSupplier;
+        intSupplier = ()-> (int) (Math.random() * 100);
+
+        return intSupplier;
     }
 
 
