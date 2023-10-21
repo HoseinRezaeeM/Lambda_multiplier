@@ -71,8 +71,9 @@ public class LambdaUtil {
      * @return square operation
      */
     public static IntUnaryOperator intSquareOperation() {
-        //todo
-        return null;
+        IntUnaryOperator intUnaryOperator;
+        intUnaryOperator = (s) ->(s*s);
+        return intUnaryOperator;
     }
 
     /**
