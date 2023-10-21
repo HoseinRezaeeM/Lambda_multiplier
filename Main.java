@@ -11,12 +11,11 @@ public class Main {
 
         Predicate<String> isEmptyPredicate = LambdaUtil.isEmptyPredicate();
         System.out.println(isEmptyPredicate.test("java"));//false
+        System.out.println(isEmptyPredicate.test(""));//true
 
 
-//        System.out.println(isEmptyPredicate.test(""));//true
-//
-//        BiFunction<String, Integer, String> stringMultiplier = LambdaUtil.stringMultiplier();
-//        System.out.println(stringMultiplier.apply("Hi", 3));//HiHiHi
+        BiFunction<String, Integer, String> stringMultiplier = LambdaUtil.stringMultiplier();
+       System.out.println(stringMultiplier.apply("Hi", 3));//HiHiHi
 //
 //        Function<BigDecimal, String> toDollarStringFunction = LambdaUtil.toDollarStringFunction();
 //        String tenDollarStr = toDollarStringFunction.apply(BigDecimal.TEN.setScale(2));
