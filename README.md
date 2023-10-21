@@ -1,9 +1,9 @@
 # Lambda_multiplier
 Use feature Java 8
-
-#Interface	Description
-#BiConsumer<T,U>	                  It represents an operation that accepts two input arguments and returns no result.
-#Consumer<T>                     	It represents an operation that accepts a single argument and returns no result.
+<h3>
+Interface	Description
+BiConsumer<T,U>	                  It represents an operation that accepts two input arguments and returns no result.
+Consumer<T>                     	It represents an operation that accepts a single argument and returns no result.
 Function<T,R>                    	It represents a function that accepts one argument and returns a result.
 Predicate<T>	                    It represents a predicate (boolean-valued function) of one argument.
 BiFunction<T,U,R>	                It represents a function that accepts two arguments and returns a a result.
@@ -45,3 +45,4 @@ ToIntFunction<T>                	It represents a function that returns an intege
 ToLongBiFunction<T,U>           	It represents a function that accepts two arguments and returns a result of long type.
 ToLongFunction<T>               	It represents a function that returns a result of long type.
 UnaryOperator<T>	                It represents an operation on a single operand that returnsa a result of the same type as its operand.
+</h3>
