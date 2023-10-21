@@ -42,24 +42,24 @@ public class Main {
        IntUnaryOperator squareOperation = LambdaUtil.intSquareOperation();
         System.out.println(squareOperation.applyAsInt(4));     //16
 
-//        LongBinaryOperator sumOperation = LambdaUtil.longSumOperation();
-//        System.out.println(sumOperation.applyAsLong(5, -10));//-5
-//
-//        ToIntFunction<String> stringToIntConverter = LambdaUtil.stringToIntConverter();
-//        int num = stringToIntConverter.applyAsInt("234");
-//        System.out.println(num);//234
-//
-//        Supplier<IntUnaryOperator> fiveMultiplyFunctionSupplier = LambdaUtil.nMultiplyFunctionSupplier(5);
-//        IntUnaryOperator multiplyByFiveOperation = fiveMultiplyFunctionSupplier.get();
-//        int result = multiplyByFiveOperation.applyAsInt(11);
-//        System.out.println(result);//11 * 5 => 55
-//
-//        Supplier<Supplier<Supplier<String>>> wellDoneSupplier = LambdaUtil.trickyWellDoneSupplier();
-//        System.out.println(wellDoneSupplier.get().get().get());//WELL DONE!
-//
-//        UnaryOperator<Function<String, String>> composeWithTrimFunction = LambdaUtil.composeWithTrimFunction();
-//        Function<String, String> toLowerWithTrim = composeWithTrimFunction.apply(String::toLowerCase);
-//        System.out.println(toLowerWithTrim.apply("  Hey "));//hey
+       LongBinaryOperator sumOperation = LambdaUtil.longSumOperation();
+        System.out.println(sumOperation.applyAsLong(5, -10));//-5
+
+        ToIntFunction<String> stringToIntConverter = LambdaUtil.stringToIntConverter();
+        int num = stringToIntConverter.applyAsInt("234");
+        System.out.println(num);//234
+
+       Supplier<IntUnaryOperator> fiveMultiplyFunctionSupplier = LambdaUtil.nMultiplyFunctionSupplier(5);
+       IntUnaryOperator multiplyByFiveOperation = fiveMultiplyFunctionSupplier.get();
+      int result = multiplyByFiveOperation.applyAsInt(11);
+        System.out.println(result);//11 * 5 => 55
+
+       Supplier<Supplier<Supplier<String>>> wellDoneSupplier = LambdaUtil.trickyWellDoneSupplier();
+       System.out.println(wellDoneSupplier.get().get().get());//WELL DONE!
+
+       UnaryOperator<Function<String, String>> composeWithTrimFunction = LambdaUtil.composeWithTrimFunction();
+       Function<String, String> toLowerWithTrim = composeWithTrimFunction.apply(String::toLowerCase);
+       System.out.println(toLowerWithTrim.apply("  Hey "));//hey
 //
 //        //extra points
 //        BiFunction<IntUnaryOperator, IntPredicate, IntUnaryOperator> intFunctionToConditionalIntFunction
