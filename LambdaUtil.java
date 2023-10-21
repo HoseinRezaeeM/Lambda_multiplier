@@ -11,26 +11,21 @@ public class LambdaUtil {
         return stringSupplier;
     }
 
-    /**
-     * Returns a {@link Predicate} of string that checks if string is empty
-     *
-     * @return a string predicate
-     */
     public static Predicate<String> isEmptyPredicate() {
         Predicate<String> stringPredicate =String::isEmpty;
         return stringPredicate;
 
     }
 
-    /**
-     * Return a {@link Function} that accepts {@link String} and returns that string repeated n time, where n is passed
-     * as function argument
-     *
-     * @return function that repeats Strings
-     */
+
     public static BiFunction<String, Integer, String> stringMultiplier() {
-        //todo
-        return null;
+        BiFunction<String, Integer, String> biFunction = (s, i) -> {
+            for (int j = 1; j < i; j++) {
+                System.out.print(s);
+            }
+            return s;
+        };
+        return biFunction;
     }
 
     /**
