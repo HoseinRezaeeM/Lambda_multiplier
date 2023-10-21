@@ -58,14 +58,11 @@ public class LambdaUtil {
     }
 
 
-    /**
-     * Returns an {@link IntUnaryOperator} that receives an int as a bound parameter, and returns a random int
-     *
-     * @return int operation
-     */
+
     public static IntUnaryOperator boundedRandomIntSupplier() {
-        //todo
-        return null;
+       IntUnaryOperator intUnaryOperator;
+       intUnaryOperator = (s) ->(int) (Math.random() * s);
+        return intUnaryOperator;
     }
 
     /**

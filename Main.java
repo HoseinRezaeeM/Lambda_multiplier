@@ -37,7 +37,7 @@ public class Main {
 
        IntUnaryOperator boundedRandomIntSupplier = LambdaUtil.boundedRandomIntSupplier();
        int randomIntLessThan1000 = boundedRandomIntSupplier.applyAsInt(1000);
-        System.out.println(randomIntLessThan1000 < 1000);//true
+        System.out.println(randomIntLessThan1000 < 1000);        //true
 //
 //        IntUnaryOperator squareOperation = LambdaUtil.intSquareOperation();
 //        System.out.println(squareOperation.applyAsInt(4));//16
