@@ -27,15 +27,17 @@ public class Main {
 
         Predicate<String> lengthInRangePredicate = LambdaUtil.lengthInRangePredicate(4, 8);
         System.out.println(lengthInRangePredicate.test("Hello world"));//false
-//
-//        IntSupplier randomIntSupplier = LambdaUtil.randomIntSupplier();
-//        int firstValue = randomIntSupplier.getAsInt();
-//        int secondValue = randomIntSupplier.getAsInt();
-//        System.out.println(firstValue == secondValue);//false
-//
-//        IntUnaryOperator boundedRandomIntSupplier = LambdaUtil.boundedRandomIntSupplier();
-//        int randomIntLessThan1000 = boundedRandomIntSupplier.applyAsInt(1000);
-//        System.out.println(randomIntLessThan1000 < 1000);//true
+
+
+        IntSupplier randomIntSupplier = LambdaUtil.randomIntSupplier();
+        int firstValue = randomIntSupplier.getAsInt();
+        int secondValue = randomIntSupplier.getAsInt();
+        System.out.println(firstValue== secondValue); //false
+
+
+       IntUnaryOperator boundedRandomIntSupplier = LambdaUtil.boundedRandomIntSupplier();
+       int randomIntLessThan1000 = boundedRandomIntSupplier.applyAsInt(1000);
+        System.out.println(randomIntLessThan1000 < 1000);//true
 //
 //        IntUnaryOperator squareOperation = LambdaUtil.intSquareOperation();
 //        System.out.println(squareOperation.applyAsInt(4));//16
