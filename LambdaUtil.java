@@ -123,5 +123,15 @@ public class LambdaUtil {
     }
 
 
+    public static BiFunction<Map<String, IntUnaryOperator>, String, IntUnaryOperator> functionLoader() {
+        Map<String, IntUnaryOperator> operatorMap = new HashMap<>();
+        BiFunction<Map<String, IntUnaryOperator>, String, IntUnaryOperator> operatorBiFunction;
+        operatorBiFunction = (map, string) -> {
+            if (string.equals("none")) {
+                return IntUnaryOperator.identity();
 
+            } return map.put(string,IntUnaryOperator.identity()); //identity return value operation do not operation on value
+        };
+        return operatorBiFunction;
+    }
 }
