@@ -109,7 +109,7 @@ public class LambdaUtil {
         return functionUnaryOperator;
     }
 
-
+//extra point
     public static BiFunction<IntUnaryOperator, IntPredicate, IntUnaryOperator> functionToConditionalFunction() {
         BiFunction<IntUnaryOperator, IntPredicate, IntUnaryOperator> biFunction;
         int a = 0;
