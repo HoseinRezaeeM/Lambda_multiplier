@@ -1,3 +1,5 @@
+package src.src.main.java;
+
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.HashMap;
@@ -124,7 +126,7 @@ public class LambdaUtil {
 
 
     public static BiFunction<Map<String, IntUnaryOperator>, String, IntUnaryOperator> functionLoader() {
-        Map<String, IntUnaryOperator> operatorMap = new HashMap<>();
+
         BiFunction<Map<String, IntUnaryOperator>, String, IntUnaryOperator> operatorBiFunction;
         operatorBiFunction = (map, string) -> {
             if (string.equals("none")) {
