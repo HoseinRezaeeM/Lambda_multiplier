@@ -1,3 +1,7 @@
+package src.src.main.java;
+
+import src.src.main.java.LambdaUtil;
+
 import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
@@ -6,7 +10,7 @@ import java.util.function.*;
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println("-----  Hosein Rrezaei HW11 -------");
+        System.out.println("\n*********  Hosein Rrezaei HW11 ********\n");
         Supplier<String> helloSupplier = LambdaUtil.helloSupplier();
         System.out.println(helloSupplier.get());  //Hello
 
@@ -78,7 +82,7 @@ public class Main {
         System.out.println("---- Q12 ----\n");
         UnaryOperator<Function<String, String>> composeWithTrimFunction = LambdaUtil.composeWithTrimFunction();
         Function<String, String> toLowerWithTrim = composeWithTrimFunction.apply(String::toLowerCase);
-        System.out.println(toLowerWithTrim.apply("  Hey "));//hey
+        System.out.println(toLowerWithTrim.apply("  Hey k"));//hey
 
 
         //extra points
@@ -102,6 +106,7 @@ public class Main {
         System.out.println(incrementFunction.applyAsInt(4));//5
         System.out.println(squareFunction.applyAsInt(3));//9
         System.out.println(identityFunction.applyAsInt(10));//10
+        System.out.println("\\\\Finish//");
     }
 
 }
