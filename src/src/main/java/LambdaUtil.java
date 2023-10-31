@@ -116,15 +116,15 @@ public class LambdaUtil {
         BiFunction<IntUnaryOperator, IntPredicate, IntUnaryOperator> biFunction;
         int a = 0;
         biFunction = (intUnaryOperator, intPredicate) -> {
-            if (intPredicate.test(a)) {
-                intUnaryOperator.applyAsInt(a);
-            }
-            return intUnaryOperator;
+            if (intPredicate.negate().test(a))
+                return intUnaryOperator;
+            else
+
+                return intUnaryOperator;
+
         };
         return biFunction;
     }
-
-
     public static BiFunction<Map<String, IntUnaryOperator>, String, IntUnaryOperator> functionLoader() {
 
         BiFunction<Map<String, IntUnaryOperator>, String, IntUnaryOperator> operatorBiFunction;
