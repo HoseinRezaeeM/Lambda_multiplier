@@ -82,7 +82,7 @@ public class Main {
         System.out.println("---- Q12 ----\n");
         UnaryOperator<Function<String, String>> composeWithTrimFunction = LambdaUtil.composeWithTrimFunction();
         Function<String, String> toLowerWithTrim = composeWithTrimFunction.apply(String::toLowerCase);
-        System.out.println(toLowerWithTrim.apply("  Hey k"));//hey
+        System.out.println(toLowerWithTrim.apply("  Hey "));//hey
 
 
         //extra points
@@ -90,7 +90,8 @@ public class Main {
         BiFunction<IntUnaryOperator, IntPredicate, IntUnaryOperator> intFunctionToConditionalIntFunction
                 = LambdaUtil.functionToConditionalFunction();
         IntUnaryOperator abs = intFunctionToConditionalIntFunction.apply(a -> -a, a -> a < 0);
-        System.out.println(abs.applyAsInt(-5));  //5
+
+        System.out.println(abs.applyAsInt(-10));  //5
 
 
         System.out.println("---- Q14 ----\n");
